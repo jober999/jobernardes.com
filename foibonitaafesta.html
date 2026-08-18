@@ -10,26 +10,33 @@
   <body>
     <div class="grain" aria-hidden="true"></div>
 
-   <header class="project-topbar">
+<header
+  class="site-reader"
+  style="
+    --reader-bg: #15120f;
+    --reader-fg: #fff9ed;
+  "
+>
+  <a href="index.html" class="reader-left">
+    <span aria-hidden="true">←</span>
+    <span>Voltar</span>
+  </a>
 
-  <a href="index.html" class="project-back">← Voltar</a>
-
-  <div class="project-running-title">
-
-   Jo Bernardes
-
+  <div class="reader-title">
+    Foi Bonita a Festa
   </div>
 
-  <nav class="project-menu" aria-label="Navegação do projeto">
-
-    <a href="index.html#work">Arquivo</a>
-
-    <a href="#images">Imagens</a>
-
-    <a href="#documents">PDF</a>
-
+  <nav class="reader-nav" aria-label="Navegação principal">
+    <a href="index.html#work">Projetos</a>
+    <a
+      href="pdfs/cv_2026_maio_pt.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      CV ↗
+    </a>
+    <a href="mailto:jobernardes@proton.me">Email</a>
   </nav>
-
 </header>
 
     <main class="case-study">

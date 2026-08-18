@@ -14,19 +14,28 @@
   <body>
     <div class="grain" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <div class="header-index">JO BERNARDES</div>
+    <header
+      class="site-reader reader-index"
+      style="--reader-bg: #e7dcc9; --reader-fg: #15120f"
+    >
+      <a href="index.html" class="reader-left"> Jo Bernardes </a>
 
-      <nav class="index-nav">
+      <div class="reader-title">Portfolio</div>
+
+      <nav class="reader-nav" aria-label="Navegação principal">
         <a href="#work">Projetos</a>
-
         <a href="#about">Sobre</a>
-
-        <a href="/pdfs/cv_2026_maio_pt.pdf" target="_blank">CV</a>
-
+        <a
+          href="pdfs/cv_2026_maio_pt.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CV ↗
+        </a>
         <a href="mailto:jobernardes@proton.me">Email</a>
       </nav>
     </header>
+
     <main>
       <section class="hero" aria-label="Introdução">
         <p class="eyebrow">
@@ -137,7 +146,7 @@
 
             <div class="project-copy">
               <span class="project-number">06</span>
-              <h2>Anthropology</h2>
+              <h2>Antropologia das imagens</h2>
               <p>Investigação editorial e ensaio visual.</p>
               <span class="year">2024</span>
             </div>
@@ -149,7 +158,7 @@
         <p
           data-text="Jo Bernardes é designer no Porto, trabalhando entre identidade visual, design editorial, web, projetos culturais e produção de imagem."
         >
-          Jo Bernardes é designer no Porto, trabalhando entre identidade visual,
+          Jo Bernardes é designer no Porto. Trabalha entre identidade visual,
           design editorial, web, projetos culturais e produção de imagem.
         </p>
         <a class="button" href="mailto:jobernardes@proton.me">
