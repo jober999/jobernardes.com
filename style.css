@@ -2,12 +2,6 @@
   --bg: #e7dcc9;
   --fg: #15120f;
   --muted: #6e665b;
-  --line: rgba(21, 18, 15, 0.28);
-  --accent: #5d5d5d;
-  --panel: #f4ead8;
-  --dark: #15120f;
-  --light: #fff9ed;
-  --radius: 3px;
 
   --font-display: "IBM Plex Sans Condensed", Arial, sans-serif;
   --font-body: "IBM Plex Sans Condensed", Arial, sans-serif;
@@ -16,7 +10,7 @@
 
 @font-face {
   font-family: "IBM Plex Sans Condensed";
-  src: url("./fonts/IBMPlexSansCondensed-Regular.ttf") format("truetype");
+  src: url("/fonts/IBMPlexSansCondensed-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +18,7 @@
 
 @font-face {
   font-family: "IBM Plex Sans Condensed";
-  src: url("./fonts/IBMPlexSansCondensed-Medium.ttf") format("truetype");
+  src: url("/fonts/IBMPlexSansCondensed-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -32,7 +26,7 @@
 
 @font-face {
   font-family: "IBM Plex Sans Condensed";
-  src: url("./fonts/IBMPlexSansCondensed-Bold.ttf") format("truetype");
+  src: url("/fonts/IBMPlexSansCondensed-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -49,8 +43,21 @@
 .case-hero h1,
 .about p,
 .project-copy h2 {
+  font-family: var(--font-project);
+}
+
+.project-copy h2 {
   font-family: var(--font-display);
-  font-weight: 700;
+
+  font-weight: 500;
+
+  font-size: clamp(1.35rem, 2.2vw, 2.7rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.035em;
+
+  text-transform: uppercase;
 }
 
 .case-hero p:not(.eyebrow),
@@ -436,8 +443,7 @@ main {
   color: var(--muted);
 }
 .hero h1,
-.case-hero h1,
-.about p {
+.case-hero h1 {
   font-weight: 700;
 }
 .hero h1,
@@ -670,44 +676,34 @@ main {
 }
 
 /* imagens horizontais */
+/* IMAGENS DOS PROJETOS */
 
-.project:not(.project-tall) img,
-.project-featured img,
-.project-wide img {
+/* Projetos horizontais */
+.project:not(.project-tall):not(.project-thesis) img {
+  width: 100%;
+  height: auto;
+
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
-/* projetos altos */
-
+/* Projetos verticais */
 .project-tall img {
+  width: 100%;
+  height: auto;
+
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 
-/*
-  A dissertação é uma exceção:
-  mostra a capa inteira.
-*/
-
-.project-thesis figure {
-  display: flex;
-
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  background: transparent;
-}
-
+/* Thesis — mostrar imagem inteira, sem cortar */
 .project-thesis img {
-  width: auto;
-  max-width: 100%;
+  display: block;
 
+  width: 100%;
   height: auto;
-  max-height: 720px;
 
   aspect-ratio: auto;
-
   object-fit: contain;
 }
 
@@ -917,7 +913,7 @@ main {
   gap: 20px;
   align-items: end;
   min-height: 56vh;
-  padding: 80px 0 20px;
+  padding: 80px 0 10px;
   border-top: 1px solid var(--fg);
 }
 
